@@ -30,10 +30,6 @@ import UIKit
         border.path = UIBezierPath(roundedRect: bounds, cornerRadius: 10).cgPath
     }
     
-    @IBAction func onPress(_ sender:SettingButton) {
-        isEnabled = true
-        sender.isEnabled = false
-    }
     
 }
 

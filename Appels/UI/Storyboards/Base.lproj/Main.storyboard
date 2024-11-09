@@ -48,7 +48,7 @@
         <!--Settings-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Appels" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SettingsViewController" customModule="Appels" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,7 +68,7 @@
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="onPress:" destination="iQD-ZT-grr" eventType="touchUpInside" id="a7a-Mw-QPw"/>
+                                            <action selector="onPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j79-mo-if3"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQD-ZT-grr" customClass="SettingButton" customModule="Appels" customModuleProvider="target">
@@ -83,7 +83,7 @@
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="onPress:" destination="06S-rC-BI1" eventType="touchUpInside" id="tD0-lQ-xxj"/>
+                                            <action selector="onPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9o2-ot-wcF"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -114,6 +114,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="LLo-F5-1lH"/>
+                    <connections>
+                        <outlet property="clean" destination="iQD-ZT-grr" id="83H-0U-AJk"/>
+                        <outlet property="load" destination="06S-rC-BI1" id="inY-8X-ZrY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,10 +200,10 @@
             <color red="0.98039215686274506" green="0.98431372549019602" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Background">
-            <color red="0.9649999737739563" green="0.97299998998641968" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.96470588235294119" green="0.97254901960784312" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MainColor">
-            <color red="0.70599997043609619" green="1" blue="0.92900002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.70588235294117652" green="1" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TabBar">
             <color red="0.10980392156862745" green="0.792156862745098" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
