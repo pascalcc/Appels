@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "cross_close_little.pdf",
+      "idiom" : "iphone"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}

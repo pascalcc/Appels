@@ -1,0 +1,27 @@
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "AWc-eE-Z0a"; */
+"AWc-eE-Z0a.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "AWc-eE-Z0a"; */
+"AWc-eE-Z0a.normalTitle" = "Button";
+
+/* Class = "UINavigationController"; title = "Recent"; ObjectID = "Cao-59-FZ3"; */
+"Cao-59-FZ3.title" = "Recent";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "LLo-F5-1lH"; */
+"LLo-F5-1lH.title" = "Settings";
+
+/* Class = "UITabBarItem"; title = "Récent"; ObjectID = "Z8S-0p-yeE"; */
+"Z8S-0p-yeE.title" = "Récent";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "crG-fJ-9Sc"; */
+"crG-fJ-9Sc.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "crG-fJ-9Sc"; */
+"crG-fJ-9Sc.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Recents"; ObjectID = "f3f-im-w5r"; */
+"f3f-im-w5r.title" = "Recents";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "lSP-gH-10v"; */
+"lSP-gH-10v.title" = "Settings";
