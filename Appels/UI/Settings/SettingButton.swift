@@ -16,8 +16,8 @@ import UIKit
         layer.cornerRadius = 10
         layer.masksToBounds = true
                 
-        setTitleColor(Colors.SettingsButton.disabledFont, for: .disabled)
-        setTitleColor(Colors.SettingsButton.enabledFont, for: .normal)
+        setTitleColor(Colors.disabledFont, for: .disabled)
+        setTitleColor(Colors.enabledFont, for: .normal)
     }
     
     private let border = CAShapeLayer()

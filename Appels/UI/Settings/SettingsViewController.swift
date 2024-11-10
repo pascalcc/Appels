@@ -22,7 +22,7 @@ class SettingsViewController: UIViewController {
 
     
     @IBAction func delayedLoading() {
-        Model.loadAll(withDelay: true)
+        CallModel.loadAll(withDelay: true)
         
         load.isEnabled = false
         clean.isEnabled = true
@@ -31,10 +31,10 @@ class SettingsViewController: UIViewController {
     @IBAction func onPress(_ sender:SettingButton) {
         sender.isEnabled = false
         if sender == load {
-            Model.loadAll()
+            CallModel.loadAll()
             clean.isEnabled = true
         } else {
-            Model.clean()
+            CallModel.clean()
             load.isEnabled = true
         }
     }

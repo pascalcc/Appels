@@ -176,7 +176,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cao-59-FZ3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Recent" image="recent calls inactive" selectedImage="recent calls" id="Z8S-0p-yeE"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="zP7-CQ-RWr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="Back Arrow Blue" largeTitles="YES" backIndicatorTransitionMaskImage="Back Arrow Blue" id="zP7-CQ-RWr">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="App"/>
@@ -247,6 +247,7 @@
     </scenes>
     <color key="tintColor" name="MainColor"/>
     <resources>
+        <image name="Back Arrow Blue" width="13" height="21"/>
         <image name="interlocutor bubbles on" width="24" height="24"/>
         <image name="outgoing" width="10" height="10"/>
         <image name="recent calls" width="32" height="32"/>

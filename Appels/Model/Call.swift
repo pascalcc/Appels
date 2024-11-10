@@ -9,7 +9,7 @@ import Foundation
 
 
 
-@MainActor let allCalls = Model()
+@MainActor let allCalls = CallModel()
 
 struct Call {
     let id: String
@@ -48,13 +48,15 @@ struct Call {
 
 
 @MainActor
-class Model: ObservableObject {
+class CallModel: ObservableObject {
     var calls: [Call] = []
     @Published var callsChanged = false
     private var worker : Task<Void, Never>? = nil
     
     static func loadAll(withDelay: Bool = false) {
 
+        loadTranscriptions()
+        
         allCalls.worker = Task(priority: .userInitiated) {
             
             let jsonPath = Bundle.main.path(forResource: "calls", ofType: "json")!
@@ -76,9 +78,6 @@ class Model: ObservableObject {
                 allCalls.callsChanged = true
                 
                 if withDelay {
-//                    DispatchQueue.main.async {
-//                        print("loading : \(allCalls.calls.count)")
-//                    }
                     try? await Task.sleep(nanoseconds: 1_000_000 * 5)
                 }
             }
@@ -98,7 +97,7 @@ class Model: ObservableObject {
     }
 }
 
-//MARK: internal json decoding
+//MARK: - internal json decoding
 
 fileprivate struct CallResponse: Decodable {
     let call: [CallJS]
