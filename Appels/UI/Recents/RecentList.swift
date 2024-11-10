@@ -26,8 +26,10 @@ class RecentList : UITableViewController {
         view.addSubview(noCall)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        observer = allCalls.$newCalls.sink { [weak self] _ in
+    override func viewWillAppear(_ animated: Bool) {        
+        tableView.reloadData()
+        
+        observer = allCalls.$callsChanged.sink { [weak self] _ in
             guard let self else { return }
             DispatchQueue.main.async {
                 self.tableView.reloadData()

@@ -50,7 +50,7 @@ struct Call {
 @MainActor
 class Model: ObservableObject {
     var calls: [Call] = []
-    @Published var newCalls = false
+    @Published var callsChanged = false
     private var worker : Task<Void, Never>? = nil
     
     static func loadAll(withDelay: Bool = false) {
@@ -73,7 +73,7 @@ class Model: ObservableObject {
                 }
                 
                 allCalls.calls.insert(Call(call), at: 0)
-                allCalls.newCalls = true
+                allCalls.callsChanged = true
                 
                 if withDelay {
 //                    DispatchQueue.main.async {
@@ -94,6 +94,7 @@ class Model: ObservableObject {
         }
                 
         allCalls.calls.removeAll()
+        allCalls.callsChanged = true
     }
 }
 
