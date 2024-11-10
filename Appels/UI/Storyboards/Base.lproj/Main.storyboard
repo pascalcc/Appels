@@ -13,25 +13,71 @@
         <!--Recents-->
         <scene sceneID="8kp-3I-U8X">
             <objects>
-                <tableViewController id="mNw-ev-EEA" sceneMemberID="viewController">
+                <tableViewController id="mNw-ev-EEA" customClass="RecentList" customModule="Appels" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="lbh-w1-cwN">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="App"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" name="Background"/>
-                        <imageView key="tableFooterView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recent calls empty" id="WKE-1M-hTv">
-                            <rect key="frame" x="0.0" y="121.66666793823242" width="393" height="311"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IIy-f4-PZh">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="call_cell_id" rowHeight="86" id="IIy-f4-PZh" customClass="RecentCell" customModule="Appels" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="86"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IIy-f4-PZh" id="F77-1W-cv3">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="86"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+33 6 01 12 25 25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Lw-Cc-pS3">
+                                            <rect key="frame" x="24" y="20" width="317" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="26" id="EhI-1Q-r2K"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" red="0.074509803921568626" green="0.2196078431372549" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 sept. 2024 à 9:28" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iZ-cm-pfm">
+                                            <rect key="frame" x="35" y="44" width="306" height="21"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" red="0.38039215686274508" green="0.42745098039215684" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="interlocutor bubbles on" translatesAutoresizingMaskIntoConstraints="NO" id="gvP-1c-tAH">
+                                            <rect key="frame" x="349" y="31" width="24" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="24" id="B5U-37-He6"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outgoing" translatesAutoresizingMaskIntoConstraints="NO" id="BZH-bB-tFz">
+                                            <rect key="frame" x="24" y="49.666666666666664" width="10" height="9.6666666666666643"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="10" id="fq3-Dj-TTc"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="BZH-bB-tFz" firstAttribute="top" secondItem="5Lw-Cc-pS3" secondAttribute="bottom" constant="3.6666666666666643" id="J6E-Mm-xz5"/>
+                                        <constraint firstItem="5Lw-Cc-pS3" firstAttribute="top" secondItem="F77-1W-cv3" secondAttribute="topMargin" constant="9" id="K3g-yi-H0V"/>
+                                        <constraint firstItem="BZH-bB-tFz" firstAttribute="centerY" secondItem="1iZ-cm-pfm" secondAttribute="centerY" id="KqO-Gn-KWv"/>
+                                        <constraint firstItem="gvP-1c-tAH" firstAttribute="leading" secondItem="5Lw-Cc-pS3" secondAttribute="trailing" constant="8" symbolic="YES" id="Nzp-dl-rf6"/>
+                                        <constraint firstItem="1iZ-cm-pfm" firstAttribute="top" secondItem="F77-1W-cv3" secondAttribute="topMargin" constant="33" id="Osd-4F-WhR"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1iZ-cm-pfm" secondAttribute="bottom" constant="10" id="QhX-SJ-cD1"/>
+                                        <constraint firstItem="5Lw-Cc-pS3" firstAttribute="leading" secondItem="BZH-bB-tFz" secondAttribute="leading" id="Upo-sP-hvR"/>
+                                        <constraint firstItem="gvP-1c-tAH" firstAttribute="trailing" secondItem="F77-1W-cv3" secondAttribute="trailingMargin" id="V6B-Vf-yYL"/>
+                                        <constraint firstItem="1iZ-cm-pfm" firstAttribute="leading" secondItem="BZH-bB-tFz" secondAttribute="trailing" constant="1" id="f0e-Nt-z2e"/>
+                                        <constraint firstItem="5Lw-Cc-pS3" firstAttribute="leading" secondItem="F77-1W-cv3" secondAttribute="leadingMargin" constant="4" id="iGW-q6-99P"/>
+                                        <constraint firstItem="gvP-1c-tAH" firstAttribute="leading" secondItem="1iZ-cm-pfm" secondAttribute="trailing" constant="8" symbolic="YES" id="lOT-rK-BRx"/>
+                                        <constraint firstItem="gvP-1c-tAH" firstAttribute="centerY" secondItem="F77-1W-cv3" secondAttribute="centerY" id="xVc-ep-6Ve"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="date" destination="1iZ-cm-pfm" id="4d8-v2-oee"/>
+                                    <outlet property="hasTranscription" destination="gvP-1c-tAH" id="9WZ-TR-8BJ"/>
+                                    <outlet property="phoneNumber" destination="5Lw-Cc-pS3" id="fAz-3c-Ex2"/>
+                                    <outlet property="status" destination="BZH-bB-tFz" id="Sw2-hh-7Pb"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -68,6 +114,7 @@
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
+                                            <action selector="delayedLoading" destination="BYZ-38-t0r" eventType="touchUpOutside" id="k5J-28-PIO"/>
                                             <action selector="onPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j79-mo-if3"/>
                                         </connections>
                                     </button>
@@ -87,7 +134,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="iQD-ZT-grr" secondAttribute="trailing" constant="10" id="CUJ-5s-R0X"/>
                                     <constraint firstAttribute="trailing" secondItem="06S-rC-BI1" secondAttribute="trailing" constant="10" id="JGW-zX-HCh"/>
@@ -135,6 +182,12 @@
                         <color key="backgroundColor" name="App"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" name="App"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -153,8 +206,9 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Exj-0U-n1m">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" name="TabBar"/>
                     </tabBar>
                     <connections>
@@ -177,7 +231,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="App"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -191,7 +247,8 @@
     </scenes>
     <color key="tintColor" name="MainColor"/>
     <resources>
-        <image name="Recent calls empty" width="110" height="110"/>
+        <image name="interlocutor bubbles on" width="24" height="24"/>
+        <image name="outgoing" width="10" height="10"/>
         <image name="recent calls" width="32" height="32"/>
         <image name="recent calls inactive" width="32" height="32"/>
         <image name="settings - active" width="32" height="32"/>
@@ -210,9 +267,6 @@
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

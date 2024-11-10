@@ -1,0 +1,42 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "nLe-uC-TxH.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Just dial a number or go to your contact book.\"; ObjectID = \"nLe-uC-TxH\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Just dial a number or go to your contact book."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il suffit de composer un numéro ou de vous rendre sur votre carnet de contacts."
+          }
+        }
+      }
+    },
+    "Sek-wc-eGQ.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"You haven't made a call yet\"; ObjectID = \"Sek-wc-eGQ\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "You haven't made a call yet"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vous n’avez pas encore passé d’appel"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

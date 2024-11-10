@@ -1,27 +1,24 @@
 
-/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "AWc-eE-Z0a"; */
-"AWc-eE-Z0a.configuration.title" = "Button";
+/* Class = "UIButton"; normalTitle = "LOAD CALLS"; ObjectID = "06S-rC-BI1"; */
+"06S-rC-BI1.normalTitle" = "CHARGER LES APPELS";
 
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "AWc-eE-Z0a"; */
-"AWc-eE-Z0a.normalTitle" = "Button";
+/* Class = "UILabel"; text = "10 sept. 2024 à 9:28"; ObjectID = "1iZ-cm-pfm"; */
+"1iZ-cm-pfm.text" = "";
 
-/* Class = "UINavigationController"; title = "Recent"; ObjectID = "Cao-59-FZ3"; */
-"Cao-59-FZ3.title" = "Recent";
+/* Class = "UILabel"; text = "+33 6 01 12 25 25"; ObjectID = "5Lw-Cc-pS3"; */
+"5Lw-Cc-pS3.text" = "";
 
 /* Class = "UINavigationItem"; title = "Settings"; ObjectID = "LLo-F5-1lH"; */
-"LLo-F5-1lH.title" = "Settings";
+"LLo-F5-1lH.title" = "Paramètres";
 
-/* Class = "UITabBarItem"; title = "Récent"; ObjectID = "Z8S-0p-yeE"; */
+/* Class = "UITabBarItem"; title = "Recent"; ObjectID = "Z8S-0p-yeE"; */
 "Z8S-0p-yeE.title" = "Récent";
 
-/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "crG-fJ-9Sc"; */
-"crG-fJ-9Sc.configuration.title" = "Button";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "crG-fJ-9Sc"; */
-"crG-fJ-9Sc.normalTitle" = "Button";
-
 /* Class = "UINavigationItem"; title = "Recents"; ObjectID = "f3f-im-w5r"; */
-"f3f-im-w5r.title" = "Recents";
+"f3f-im-w5r.title" = "Récents";
+
+/* Class = "UIButton"; normalTitle = "REMOVE CALLS"; ObjectID = "iQD-ZT-grr"; */
+"iQD-ZT-grr.normalTitle" = "VIDER LES APPELS";
 
 /* Class = "UITabBarItem"; title = "Settings"; ObjectID = "lSP-gH-10v"; */
-"lSP-gH-10v.title" = "Settings";
+"lSP-gH-10v.title" = "Paramètres";

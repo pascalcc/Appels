@@ -1,0 +1,23 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "chat_advert" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🔒 This captioned message is encrypted\nand stored securely."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "🔒 Ce message sous-titré est encrypté\net stocké de manière sécurisée."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

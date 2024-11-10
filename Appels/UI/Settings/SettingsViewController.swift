@@ -15,18 +15,26 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        load.isEnabled = allCalls.calls.isEmpty
+        clean.isEnabled = !load.isEnabled
     }
 
-    @IBAction func onPress(_ sender:SettingButton) {
+    
+    @IBAction func delayedLoading() {
+        Model.loadAll(withDelay: true)
         
+        load.isEnabled = false
+        clean.isEnabled = true
+    }
+    
+    @IBAction func onPress(_ sender:SettingButton) {
+        sender.isEnabled = false
         if sender == load {
             Model.loadAll()
-            sender.isEnabled = false
             clean.isEnabled = true
         } else {
             Model.clean()
-            sender.isEnabled = false
             load.isEnabled = true
         }
     }
