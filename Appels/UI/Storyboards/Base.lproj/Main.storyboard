@@ -222,7 +222,7 @@
         <!--Recent-->
         <scene sceneID="MD9-Do-Yqn">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cao-59-FZ3" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cao-59-FZ3" customClass="FixStatusBar" customModule="Appels" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Recent" image="recent calls inactive" selectedImage="recent calls" id="Z8S-0p-yeE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="Back Arrow Blue" largeTitles="YES" backIndicatorTransitionMaskImage="Back Arrow Blue" id="zP7-CQ-RWr">
@@ -272,7 +272,7 @@
         <!--Settings-->
         <scene sceneID="ZHy-36-owG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MIv-Db-nzq" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MIv-Db-nzq" customClass="FixStatusBar" customModule="Appels" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="settings - inactive" selectedImage="settings - active" id="lSP-gH-10v"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="WX9-uK-X7M">

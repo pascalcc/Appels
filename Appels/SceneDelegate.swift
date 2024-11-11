@@ -11,7 +11,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
+    // FIX: hide statusbar over navbar
+    func fixStatusBar(inView: UIView) {
+        let statusBar = UIView(frame: (window?.windowScene?.statusBarManager?.statusBarFrame)!)
+        statusBar.backgroundColor = UIColor(named: "App")
+        inView.addSubview(statusBar)
+    }
+    // FIX: hide statusbar over navbar
+    
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
