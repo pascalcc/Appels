@@ -86,8 +86,57 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Recents" id="f3f-im-w5r"/>
+                    <connections>
+                        <outlet property="noCall" destination="6le-hW-xkq" id="v2c-w0-WJW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95d-Ud-ucp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="6le-hW-xkq">
+                    <rect key="frame" x="0.0" y="0.0" width="267" height="233"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Recent calls empty" translatesAutoresizingMaskIntoConstraints="NO" id="zQL-LL-8Aa">
+                            <rect key="frame" x="78.666666666666686" y="0.0" width="110" height="110"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="110" id="98K-od-c3I"/>
+                                <constraint firstAttribute="height" constant="110" id="du5-uh-kDy"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven't made a call yet" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Z8-s2-6J4">
+                            <rect key="frame" x="0.0" y="126" width="267" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="a2i-1j-HsZ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="19"/>
+                            <color key="textColor" red="0.074509803920000006" green="0.21960784310000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just dial a number or go to your contact book." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9V-hc-Yq0">
+                            <rect key="frame" x="0.0" y="183" width="267" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="72O-Q5-yRL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                            <color key="textColor" red="0.3803921569" green="0.42745098040000001" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="Up9-jS-FkF"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" notEnabled="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="X9V-hc-Yq0" secondAttribute="bottom" id="35t-CT-ngT"/>
+                        <constraint firstItem="5Z8-s2-6J4" firstAttribute="leading" secondItem="Up9-jS-FkF" secondAttribute="leading" id="7xm-u3-dVD"/>
+                        <constraint firstItem="X9V-hc-Yq0" firstAttribute="leading" secondItem="Up9-jS-FkF" secondAttribute="leading" id="EqT-9G-DlH"/>
+                        <constraint firstItem="zQL-LL-8Aa" firstAttribute="top" secondItem="6le-hW-xkq" secondAttribute="top" id="MtO-jS-TGx"/>
+                        <constraint firstItem="5Z8-s2-6J4" firstAttribute="top" secondItem="zQL-LL-8Aa" secondAttribute="bottom" constant="16" id="ORe-Uz-8Zw"/>
+                        <constraint firstItem="X9V-hc-Yq0" firstAttribute="trailing" secondItem="Up9-jS-FkF" secondAttribute="trailing" id="SHi-08-odN"/>
+                        <constraint firstItem="5Z8-s2-6J4" firstAttribute="trailing" secondItem="Up9-jS-FkF" secondAttribute="trailing" id="Uep-nq-CZz"/>
+                        <constraint firstItem="zQL-LL-8Aa" firstAttribute="centerX" secondItem="6le-hW-xkq" secondAttribute="centerX" id="Woz-2Y-ODM"/>
+                    </constraints>
+                </view>
             </objects>
             <point key="canvasLocation" x="1867.9389312977098" y="17.605633802816904"/>
         </scene>
@@ -248,6 +297,7 @@
     <color key="tintColor" name="MainColor"/>
     <resources>
         <image name="Back Arrow Blue" width="13" height="21"/>
+        <image name="Recent calls empty" width="110" height="110"/>
         <image name="interlocutor bubbles on" width="24" height="24"/>
         <image name="outgoing" width="10" height="10"/>
         <image name="recent calls" width="32" height="32"/>

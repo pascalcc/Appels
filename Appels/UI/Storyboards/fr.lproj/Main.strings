@@ -8,8 +8,14 @@
 /* Class = "UILabel"; text = "+33 6 01 12 25 25"; ObjectID = "5Lw-Cc-pS3"; */
 "5Lw-Cc-pS3.text" = "";
 
+/* Class = "UILabel"; text = "You haven't made a call yet"; ObjectID = "5Z8-s2-6J4"; */
+"5Z8-s2-6J4.text" = "Vous n’avez pas encore passé d’appel";
+
 /* Class = "UINavigationItem"; title = "Settings"; ObjectID = "LLo-F5-1lH"; */
 "LLo-F5-1lH.title" = "Paramètres";
+
+/* Class = "UILabel"; text = "Just dial a number or go to your contact book."; ObjectID = "X9V-hc-Yq0"; */
+"X9V-hc-Yq0.text" = "Il suffit de composer un numéro ou de vous rendre sur votre carnet de contacts.";
 
 /* Class = "UITabBarItem"; title = "Recent"; ObjectID = "Z8S-0p-yeE"; */
 "Z8S-0p-yeE.title" = "Récent";

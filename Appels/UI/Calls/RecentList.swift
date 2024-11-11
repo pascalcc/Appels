@@ -21,7 +21,6 @@ class RecentList : UITableViewController {
         tableView.rowHeight = 86
         tableView.backgroundColor = UIColor(named: "Background")
         
-        noCall = (Bundle.main.loadNibNamed("NoCall", owner: self)!.first as! UIView)
         noCall.center = tableView.center
         noCall.center.y -= noCall.frame.midX
         view.addSubview(noCall)
@@ -77,7 +76,7 @@ extension RecentList {
         let vc = UIHostingController(rootView: TranscriptionView(transcription: t))
         vc.navigationItem.largeTitleDisplayMode = .never
         vc.hidesBottomBarWhenPushed = true
- 
+        
         //FIX: try custom navbarTitle
         let title = NavBarTitle(frame: CGRect(x: 0, y: 10, width: NavBarTitle.WIDTH, height: NavBarTitle.HEIGHT))
         title.title.text = call.phoneNumber
