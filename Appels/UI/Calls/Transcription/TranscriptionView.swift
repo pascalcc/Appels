@@ -55,7 +55,7 @@ extension TranscriptionView {
         
     func userText(_ st : SubTranscription) -> some View {
         VStack(alignment: st.mine ? .leading : .trailing, spacing: 4) {
-            ForEach(st.decoratedTexts, id: \.self) { dt in
+            ForEach(st.decoratedTexts, id: \.foreach_id) { dt in
                 Text(dt.text).config(dt.position, isMine:st.mine)
             }
         }
