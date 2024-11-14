@@ -57,7 +57,7 @@ class CallModel: ObservableObject {
 
         loadTranscriptions()
         
-        allCalls.worker = Task(priority: .userInitiated) {
+        allCalls.worker = Task.detached(priority: .userInitiated) {
             
             let jsonPath = Bundle.main.path(forResource: "calls", ofType: "json")!
             let data = try! Data(contentsOf: URL(fileURLWithPath: jsonPath))
@@ -74,15 +74,19 @@ class CallModel: ObservableObject {
                     return
                 }
                 
-                allCalls.calls.insert(Call(call), at: 0)
-                allCalls.callsChanged = true
-                
+                await MainActor.run {
+                    allCalls.calls.insert(Call(call), at: 0)
+                    allCalls.callsChanged = true
+                }
+                                
                 if withDelay {
                     try? await Task.sleep(nanoseconds: 1_000_000 * 5)
                 }
             }
             
-            allCalls.worker = nil
+            await MainActor.run {
+                allCalls.worker = nil
+            }
         }
     }
 

@@ -68,7 +68,7 @@ fileprivate enum DirectionJS: Int, Decodable {
     }
     allTranscriptions = [:]
     
-    Task(priority: .userInitiated) {
+    Task.detached(priority: .userInitiated) {
         
         let jsonPath = Bundle.main.path(forResource: "transcriptions", ofType: "json")!
         let data = try! Data(contentsOf: URL(fileURLWithPath: jsonPath))
